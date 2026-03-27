@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karym Nava | DevOps Portfolio</title>
+
+  <style>
+    /* =========================
+       RESET & BASE STYLES
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #7C3AED;
+      opacity: 1;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero span {
+      color: #7C3AED;
+    }
+
+    .hero p {
+      opacity: 0.7;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+    section {
+      padding: 5rem 1.5rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    /* =========================
+       GLASS CARD
+    ========================= */
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #7C3AED;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+    .about {
+      max-width: 700px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .skill {
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      background: #1e293b;
+      border: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(124,58,237,0.4), transparent);
+      top: 0;
+      left: -100%;
+      transition: 0.6s;
+    }
+
+    .skill:hover::after {
+      left: 100%;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .project-img {
+      height: 150px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1e293b, #7C3AED);
+      margin-bottom: 1rem;
+    }
+
+    @media(min-width: 768px) {
+      .projects {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    footer a {
+      color: #7C3AED;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER / NAV
+  ========================= -->
+  <header>
+    <nav>
+      <div><strong>Karym Nava</strong></div>
+      <div>
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Proyectos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+    <section class="hero">
+      <div>
+        <h1>Karym Nava Elizalde</h1>
+        <h1><span>Aspiring DevOps Engineer</span></h1>
+        <p>
+          Construyendo el puente entre desarrollo y operaciones mediante automatización, infraestructura moderna y mentalidad DevOps.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <div class="card about">
+        <p>
+          Soy Software Developer en transición hacia DevOps, enfocado en construir sistemas más eficientes, escalables y automatizados. 
+          Actualmente estoy profundizando en herramientas clave como Docker, Kubernetes y CI/CD mientras participo en un bootcamp especializado.
+        </p>
+        <br/>
+        <p>
+          Me apasiona optimizar procesos, mejorar la entrega continua y diseñar infraestructuras modernas que permitan a los equipos desarrollar más rápido y con mayor calidad.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+    <section id="skills">
+      <h2>DevOps Roadmap</h2>
+      <div class="skills">
+        <div class="skill">Linux</div>
+        <div class="skill">Docker</div>
+        <div class="skill">CI/CD</div>
+        <div class="skill">Kubernetes</div>
+        <div class="skill">Terraform</div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <div class="projects">
+
+        <div class="card">
+          <div class="project-img"></div>
+          <h3>CI/CD Pipeline</h3>
+          <p>Pipeline automatizado con integración y despliegue continuo usando contenedores.</p>
+        </div>
+
+        <div class="card">
+          <div class="project-img"></div>
+          <h3>Dockerized App</h3>
+          <p>Aplicación completamente containerizada para despliegues rápidos y consistentes.</p>
+        </div>
+
+        <div class="card">
+          <div class="project-img"></div>
+          <h3>Infraestructura como Código</h3>
+          <p>Provisionamiento de infraestructura usando Terraform y buenas prácticas.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  <footer>
+    <p>
+      © 2026 Karym Nava Elizalde — 
+      <a href="https://github.com/KarymNavaElizalde" target="_blank">
+        github.com/KarymNavaElizalde
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
